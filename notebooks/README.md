@@ -12,9 +12,9 @@ This folder contains the Jupyter notebooks used for the Customer Churn Analysis 
 ## How to Run the Notebooks
 
 VS Code
-Open the notebook in VS Code.
-Click on the notebook (.ipynb) you want to run.
-Select the correct Python kernel (the one where packages are installed).
-Make sure you have Python installed (≥3.8) and the following packages:
+* Open the notebook in VS Code.
+* Click on the notebook (.ipynb) you want to run.
+* Select the correct Python kernel (the one where packages are installed).
+* Make sure you have Python installed (≥3.8) and the following packages:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter
