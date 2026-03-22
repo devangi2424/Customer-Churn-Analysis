@@ -28,32 +28,32 @@ The main objectives of this project are:
 ```
 Customer-Churn-Analysis/
 │
-├── data/
-│   ├── raw/
-│   │   └── customer_churn_dataset.csv
-│   │
-│   └── processed/
-│       └── preprocessed_data.csv
+├── data_preparation/
 │
+├── clustering_analysis/
+│      
 ├── notebooks/
-│   └── churn_analysis.ipynb
+│   ├── data_preparation.ipynb
+│   └── clustering_analysis.ipynb
 │
 ├── models/
 │   └── kmeans_model.pkl
 │
-├── docs/
-│   ├── project_report.pdf
-│   └── results_and_visualizations
+├── documentss/
+│   ├── Data Preparation Results.pdf
+│   ├── Clustering Analysis Results.pdf
+│   ├── cluster_visualization.png   
+│   └── elbow_method_results.png
 │
 ├── README.md
-└── requirements.txt
+└── LICENSE
 ```
 
 ---
 
 ## Folder Description
 
-### data/
+### data_preparation/
 
 Contains the dataset used in the project.
 
