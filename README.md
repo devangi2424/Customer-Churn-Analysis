@@ -37,24 +37,24 @@ Customer-Churn-Analysis/
 │
 ├── clustering_analysis/
 │
-├── predictive_modeling/
+├── ann_predictive_modeling/
 │
 ├── notebooks/
 │   ├── data_preparation.ipynb
 │   ├── clustering_analysis.ipynb
-│   └── ann_model.ipynb
+│   └── ann_predictive_modeling.ipynb
 │
 ├── models/
 │   ├── kmeans_model.pkl
 │   ├── ann_model.h5
-│   └── scaler.pkl
+│   
 │
 ├── documents/
 │   ├── Data Preparation Results.pdf
 │   ├── Clustering Analysis Results.pdf
-│   ├── ANN Model Report.pdf
-│   ├── Final Report.pdf
-│   └── visualizations/
+│   ├── ANN Predictive Modeling.pdf
+│   ├── Final_Report.pdf
+│   
 │
 ├── README.md
 └── LICENSE
@@ -71,7 +71,7 @@ Customer-Churn-Analysis/
 ### clustering_analysis/
 Contains scripts and outputs for customer segmentation using K-Means.
 
-### predictive_modeling/
+### ann_predictive_modeling/
 Contains ANN model development, training, and evaluation.
 
 ### notebooks/
@@ -84,7 +84,6 @@ Includes:
 ### models/
 - `kmeans_model.pkl` → Clustering model  
 - `ann_model.h5` → Trained ANN model  
-- `scaler.pkl` → Feature scaler  
 
 ### documents/
 - Reports  
