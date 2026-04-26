@@ -1,267 +1,194 @@
-# Customer Churn Analysis Project
+📘 Customer Churn Analysis & Prediction Project
+📊 Project Overview
 
-## Project Overview
+Customer churn is a critical challenge for subscription-based and service-driven businesses. The ability to identify customers likely to leave enables organizations to take proactive actions to improve retention and minimize revenue loss.
 
-Customer churn is a major challenge for subscription-based and service-oriented businesses. Identifying customers who are likely to leave allows organizations to take proactive measures to improve retention and reduce revenue loss.
+This project combines customer segmentation (Stage 2) and predictive modeling (Stage 3) to deliver both analytical insights and actionable predictions.
 
-This project focuses on analyzing customer behavior and identifying churn patterns using data preprocessing, feature engineering, and clustering techniques. By applying **K-Means clustering**, the project segments customers into meaningful groups based on their characteristics and behavior.
+Stage 2: Customer Segmentation using K-Means Clustering
+Stage 3: Customer Churn Prediction using Artificial Neural Networks (ANN)
 
-The results help identify high-risk customer segments and provide insights that businesses can use to develop targeted retention strategies.
+By integrating clustering and prediction, this project provides a data-driven framework for identifying high-risk customers and improving retention strategies.
 
----
-
-## Objectives
-
-The main objectives of this project are:
-
-- Analyze customer data and identify patterns related to churn.
-- Preprocess and clean the dataset for analysis.
-- Apply scaling and feature transformation techniques.
-- Determine the optimal number of clusters using clustering evaluation methods.
-- Perform customer segmentation using **K-Means clustering**.
-- Visualize the clusters and interpret customer behavior within each segment.
-
----
-
-## Project Structure
-
-```
+🎯 Objectives
+Analyze customer data to identify churn patterns
+Perform data preprocessing and feature engineering
+Apply scaling techniques for model optimisation
+Segment customers using K-Means Clustering
+Predict churn using Artificial Neural Networks (ANN)
+Evaluate model performance using classification metrics
+Identify key factors influencing churn and retention
+Provide actionable business recommendations
+🗂️ Project Structure
 Customer-Churn-Analysis/
 │
 ├── data_preparation/
+│   ├── raw/
+│   └── processed/
 │
 ├── clustering_analysis/
-│      
+│
+├── predictive_modeling/
+│
 ├── notebooks/
 │   ├── data_preparation.ipynb
-│   └── clustering_analysis.ipynb
+│   ├── clustering_analysis.ipynb
+│   └── ann_model.ipynb
 │
 ├── models/
-│   └── kmeans_model.pkl
+│   ├── kmeans_model.pkl
+│   ├── ann_model.h5
+│   └── scaler.pkl
 │
-├── documentss/
+├── documents/
 │   ├── Data Preparation Results.pdf
 │   ├── Clustering Analysis Results.pdf
-│   ├── cluster_visualization.png   
-│   └── elbow_method_results.png
+│   ├── ANN Model Report.pdf
+│   ├── Final Report.pdf
+│   └── visualizations/
 │
 ├── README.md
 └── LICENSE
-```
+📁 Folder Description
+🔹 data_preparation/
+raw/ → Original dataset
+processed/ → Cleaned and transformed dataset used for modeling
+🔹 clustering_analysis/
 
----
+Contains scripts and outputs related to customer segmentation using K-Means
 
-## Folder Description
+🔹 predictive_modeling/
 
-### data_preparation/
+Contains ANN model development, training, and evaluation
 
-Contains the dataset used in the project.
+🔹 notebooks/
 
-- **raw/** – Contains the original dataset.
-- **processed/** – Contains the cleaned and preprocessed dataset used for modeling.
+Jupyter notebooks covering:
 
-### notebooks/
+Data exploration
+Preprocessing
+Clustering analysis
+ANN model training & evaluation
+🔹 models/
 
-Contains Jupyter notebooks used for the analysis and model development.
+Stores trained models:
 
-Includes steps such as:
+kmeans_model.pkl → Customer segmentation model
+ann_model.h5 → Trained ANN model
+scaler.pkl → Preprocessing scaler
+🔹 documents/
 
-- Data exploration
-- Data preprocessing
-- Feature scaling
-- Cluster analysis
-- Visualization
+Contains reports and outputs:
 
-### models/
+Data Preparation Report
+Clustering Analysis Report
+ANN Model Report
+Final Business Report
+Visualizations
+⚙️ Technologies Used
+Python
+Jupyter Notebook
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+TensorFlow / Keras
+K-Means Clustering
+Git & GitHub
+🧠 Methodology
+📌 Stage 1: Data Preparation
+Handling missing values
+Encoding categorical variables
+Feature transformation
+Data type conversion
+📌 Stage 2: Customer Segmentation (Clustering)
+🔹 Feature Scaling
+Standardization applied for uniform feature contribution
+🔹 Optimal Cluster Selection
+Elbow Method used
+🔹 K-Means Clustering
 
-Stores trained machine learning models used in the project.
+Customer segments identified:
 
-Example:
-
-- Trained **K-Means clustering model**
-
-### docs/
-
-Contains important documentation and results related to the project.
-
-Includes:
-
-- Project report
-- Visualizations
-- Results explanation
-
----
-
-## Technologies Used
-
-The project is implemented using the following technologies and libraries:
-
-- Python
-- Jupyter Notebook
-- Pandas – Data manipulation
-- NumPy – Numerical computations
-- Matplotlib
-- Seaborn – Data visualization
-- Scikit-learn – Machine learning algorithms
-- K-Means Clustering – Customer segmentation
-- Git
-- GitHub – Version control and collaboration
-
----
-
-## Methodology
-
-The project follows the following workflow.
-
-### Data Collection
-
-The dataset contains customer-related information such as:
-
-- Customer demographics
-- Service usage
-- Account details
-
-These attributes may influence churn behavior.
-
-### Data Preprocessing
-
-The dataset was cleaned and prepared using the following steps:
-
-- Handling missing values
-- Removing irrelevant columns
-- Encoding categorical variables
-- Converting data types where necessary
-
-### Feature Scaling
-
-Feature scaling was applied to ensure that all variables contribute equally to the clustering algorithm.
-
-Techniques used include:
-
-- Standardization
-- Normalization
-
-### Determining Optimal Clusters
-
-The **Elbow Method** was used to determine the optimal number of clusters for K-Means.
-
-This method evaluates the **Within-Cluster Sum of Squares (WCSS)** for different numbers of clusters to find the best segmentation.
-
-### K-Means Clustering
-
-K-Means clustering was applied to segment customers into different groups based on their characteristics.
-
-Example clusters include:
-
-- High-value loyal customers
-- Customers with moderate engagement
-- Customers with high churn risk
-
-### Visualization
-
-Cluster results were visualized using graphs and plots to interpret the segmentation and understand customer behavior patterns.
-
----
-
-## Key Insights
-
-The clustering analysis revealed several important insights:
-
-- Some customer segments show **higher likelihood of churn** due to lower engagement.
-- Certain clusters represent **loyal and high-value customers**.
-- Identifying these segments allows businesses to develop **targeted retention strategies**.
-
----
-
-## How to Run the Project
-
-Follow the steps below to run the project on your local machine.
-
-### Clone the Repository
-
-```bash
+High-value loyal customers
+Medium engagement customers
+High churn-risk customers
+🔹 Visualization
+Cluster plots
+Elbow curve
+📌 Stage 3: Churn Prediction (ANN)
+🔹 Model Architecture
+Input layer based on feature count
+Hidden layers with ReLU activation
+Output layer with Sigmoid activation
+🔹 Training
+Optimizer: Adam
+Loss: Binary Crossentropy
+Validation-based training
+🔹 Model Performance
+Metric	Value
+Accuracy	78.28%
+Precision (Churn)	0.63
+Recall (Churn)	0.43
+F1 Score (Churn)	0.51
+📊 Key Insights
+🔹 From Clustering
+Identified distinct customer segments
+High-risk groups show low tenure and engagement
+🔹 From ANN Model
+Strong performance on non-churn prediction (recall = 0.91)
+Moderate churn detection due to imbalance
+Key churn indicators:
+High Monthly Charges
+Low Tenure
+Short-term contracts
+💼 Business Impact
+Enables early churn detection
+Supports targeted retention strategies
+Improves revenue retention
+Enhances customer lifecycle understanding
+Key Business Findings
+High charges increase churn risk
+Long-term customers are more stable
+Contract-based users churn less
+📌 Recommendations
+Introduce loyalty programs
+Optimize pricing strategies
+Promote long-term contracts
+Improve onboarding experience
+Target high-risk segments with campaigns
+⚠️ Limitations
+Moderate recall for churn (0.43)
+Class imbalance affects performance
+Limited interpretability of ANN
+Correlation captures only linear relationships
+🚀 Future Improvements
+Apply SMOTE / class balancing
+Tune classification threshold
+Use ensemble models (XGBoost, Random Forest)
+Deploy as web app / API
+Integrate dashboards (Power BI / Tableau)
+▶️ How to Run
 git clone https://github.com/your-username/customer-churn-analysis.git
-```
-
-### Navigate to the Project Directory
-
-```bash
 cd customer-churn-analysis
-```
-
-### Install Required Dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### Run the Jupyter Notebook
-
-```bash
 jupyter notebook
-```
+👥 Contributors
+Diksha Sharma
+Devangi Patel
+Krish Patel
+Priyanka Panchal
+Yash Thakkar
+📜 License
 
-Then open the notebook located in the **notebooks** folder.
+This project is for academic and educational purposes.
 
----
+⭐ Final Note
 
-## Team Collaboration
+This project demonstrates a complete end-to-end machine learning pipeline, combining:
 
-This project is developed collaboratively using GitHub.
-
-Team members can contribute by:
-
-- Cloning the repository
-- Creating a new branch
-- Making changes or adding features
-- Committing updates
-- Submitting a Pull Request
-
-Example workflow:
-
-```bash
-git checkout -b feature-name
-git add .
-git commit -m "Added new analysis"
-git push origin feature-name
-```
-
----
-
-## Results
-
-The project successfully:
-
-- Prepared and cleaned the dataset
-- Applied clustering techniques for segmentation
-- Identified meaningful customer groups
-- Provided insights that can help businesses reduce churn
-
-The clustering model and visualizations demonstrate how machine learning can support customer retention strategies.
-
----
-
-## Future Improvements
-
-Possible future improvements include:
-
-- Applying classification models such as **Logistic Regression** or **Random Forest** to predict churn.
-- Using advanced clustering methods like **DBSCAN** or **Hierarchical Clustering**.
-- Integrating dashboard visualization tools such as **Power BI** or **Tableau**.
-- Deploying the model as a **web application or API**.
-
----
-
-## Contributors
-
-- Diksha Sharma
-- Devangi Patel
-- Krish Patel
-- Priyanka Panchal
-- Yash Thakkar
-
----
-
-## License
-
-This project is created for **academic and educational purposes**.
+Data preprocessing
+Clustering analysis
+Deep learning prediction
+Business insight generation
