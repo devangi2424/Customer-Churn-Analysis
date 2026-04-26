@@ -1,7 +1,7 @@
 📘 Customer Churn Analysis & Prediction Project
 📊 Project Overview
 
-Customer churn is a critical challenge for subscription-based and service-driven businesses. The ability to identify customers likely to leave enables organizations to take proactive actions to improve retention and minimize revenue loss.
+Customer churn is a critical challenge for subscription-based and service-driven businesses. Identifying customers who are likely to leave allows organizations to take proactive measures to improve retention and reduce revenue loss.
 
 This project combines customer segmentation (Stage 2) and predictive modeling (Stage 3) to deliver both analytical insights and actionable predictions.
 
@@ -50,41 +50,33 @@ Customer-Churn-Analysis/
 ├── README.md
 └── LICENSE
 📁 Folder Description
-🔹 data_preparation/
-raw/ → Original dataset
-processed/ → Cleaned and transformed dataset used for modeling
-🔹 clustering_analysis/
+data_preparation/
+raw/ – Original dataset
+processed/ – Cleaned and transformed dataset
+clustering_analysis/
 
-Contains scripts and outputs related to customer segmentation using K-Means
+Contains scripts and outputs for customer segmentation using K-Means.
 
-🔹 predictive_modeling/
+predictive_modeling/
 
-Contains ANN model development, training, and evaluation
+Contains ANN model development, training, and evaluation.
 
-🔹 notebooks/
+notebooks/
 
-Jupyter notebooks covering:
+Includes:
 
 Data exploration
 Preprocessing
 Clustering analysis
-ANN model training & evaluation
-🔹 models/
-
-Stores trained models:
-
-kmeans_model.pkl → Customer segmentation model
+ANN model training and evaluation
+models/
+kmeans_model.pkl → Clustering model
 ann_model.h5 → Trained ANN model
-scaler.pkl → Preprocessing scaler
-🔹 documents/
-
-Contains reports and outputs:
-
-Data Preparation Report
-Clustering Analysis Report
-ANN Model Report
-Final Business Report
+scaler.pkl → Feature scaler
+documents/
+Reports
 Visualizations
+Final analysis outputs
 ⚙️ Technologies Used
 Python
 Jupyter Notebook
@@ -97,61 +89,61 @@ TensorFlow / Keras
 K-Means Clustering
 Git & GitHub
 🧠 Methodology
-📌 Stage 1: Data Preparation
+Stage 1: Data Preparation
 Handling missing values
 Encoding categorical variables
 Feature transformation
 Data type conversion
-📌 Stage 2: Customer Segmentation (Clustering)
-🔹 Feature Scaling
-Standardization applied for uniform feature contribution
-🔹 Optimal Cluster Selection
-Elbow Method used
-🔹 K-Means Clustering
+Stage 2: Customer Segmentation (Clustering)
+Feature Scaling
+Standardization applied to ensure equal contribution of features
+Optimal Cluster Selection
+Elbow Method used to determine optimal number of clusters
+K-Means Clustering
 
 Customer segments identified:
 
 High-value loyal customers
 Medium engagement customers
 High churn-risk customers
-🔹 Visualization
+Visualization
 Cluster plots
 Elbow curve
-📌 Stage 3: Churn Prediction (ANN)
-🔹 Model Architecture
+Stage 3: Churn Prediction (ANN)
+Model Architecture
 Input layer based on feature count
 Hidden layers with ReLU activation
 Output layer with Sigmoid activation
-🔹 Training
+Training
 Optimizer: Adam
-Loss: Binary Crossentropy
+Loss Function: Binary Crossentropy
 Validation-based training
-🔹 Model Performance
+Model Performance
 Metric	Value
 Accuracy	78.28%
 Precision (Churn)	0.63
 Recall (Churn)	0.43
 F1 Score (Churn)	0.51
 📊 Key Insights
-🔹 From Clustering
+From Clustering
 Identified distinct customer segments
 High-risk groups show low tenure and engagement
-🔹 From ANN Model
-Strong performance on non-churn prediction (recall = 0.91)
-Moderate churn detection due to imbalance
+From ANN Model
+Strong performance for non-churn prediction (recall = 0.91)
+Moderate performance for churn detection
 Key churn indicators:
 High Monthly Charges
 Low Tenure
 Short-term contracts
 💼 Business Impact
-Enables early churn detection
+Enables early identification of at-risk customers
 Supports targeted retention strategies
 Improves revenue retention
 Enhances customer lifecycle understanding
-Key Business Findings
+Key Findings
 High charges increase churn risk
 Long-term customers are more stable
-Contract-based users churn less
+Contract-based customers are less likely to churn
 📌 Recommendations
 Introduce loyalty programs
 Optimize pricing strategies
@@ -164,10 +156,10 @@ Class imbalance affects performance
 Limited interpretability of ANN
 Correlation captures only linear relationships
 🚀 Future Improvements
-Apply SMOTE / class balancing
+Apply SMOTE or class balancing
 Tune classification threshold
 Use ensemble models (XGBoost, Random Forest)
-Deploy as web app / API
+Deploy as web app or API
 Integrate dashboards (Power BI / Tableau)
 ▶️ How to Run
 git clone https://github.com/your-username/customer-churn-analysis.git
@@ -189,6 +181,6 @@ This project is for academic and educational purposes.
 This project demonstrates a complete end-to-end machine learning pipeline, combining:
 
 Data preprocessing
-Clustering analysis
-Deep learning prediction
-Business insight generation
+Customer segmentation
+Deep learning-based churn prediction
+Business-driven insights
